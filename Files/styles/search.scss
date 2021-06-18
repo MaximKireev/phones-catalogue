@@ -1,0 +1,42 @@
+
+.global_search {
+  width: 100%;
+  border: none;
+  margin: 20px auto;
+  outline: none;
+  &:focus{
+    font-size: 20px;
+  }
+
+}
+.price_search, .brand_search, .os_search  {
+display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  border-top: 1px solid lightgray;
+  padding: 10px;
+
+}
+.price_search>p, .brand_search>p, .os_search>p {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  flex-grow: 1;
+  padding: 0;
+  margin: 10px 0;
+  color: #1C1C1B;
+}
+.brand_search, .os_search {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  list-style: none;
+
+}
+
+.from, .to {
+  width: 70px;
+  margin: 0 20px;
+  outline: none;
+}

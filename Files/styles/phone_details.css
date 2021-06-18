@@ -1,0 +1,89 @@
+.gallery-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-rows: auto;
+  margin-top: 50px;
+  gap: 10px;
+	grid-template-areas:
+  ".                .                .               back_to_main    "
+  "phone_name       phone_name       phone_name      phone-right-menu"
+  "phone-left-menu  bf-container     bf-container    phone-right-menu"
+  "phone-left-menu  bf-container     bf-container    phone-right-menu"
+  "phone-left-menu  small-img-list   small-img-list  phone-right-menu";
+}
+
+.bf-container {
+  grid-area: bf-container;
+}
+
+.small-img-list {
+	background-color: white;
+	grid-area: small-img-list;
+  list-style: none;
+  max-height: 150px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+	display: flex;
+  gap: 10px;
+}
+.largeImg {
+	display: block;
+	margin: 0 auto;
+}
+.small-img-list > li {
+  width: 100px;
+  height: 100px;
+
+  border:  1px solid lightgray;
+
+}
+.phone-right-menu {
+  grid-area: phone-right-menu;
+  background-color: gray;
+}
+.add-to-cart {
+  background-color: #0081D6;
+  display: block;
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0 5%;
+  border: none;
+  outline: none;
+}
+.phone-left-menu {
+  grid-area: phone-left-menu
+}
+.advantages-list {
+  list-style: none;
+}
+.rating_container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.rating_item {
+  font-size: 30px;
+  cursor: pointer;
+  color: lightgray;
+}
+.rating_item:hover {
+  color: orange;
+}
+.rating_container[data-total-value = '5'] .rating_item:nth-child(n+1),
+.rating_container[data-total-value = '4'] .rating_item:nth-child(n+2),
+.rating_container[data-total-value = '3'] .rating_item:nth-child(n+3),
+.rating_container[data-total-value = '2'] .rating_item:nth-child(n+4),
+.rating_container[data-total-value = '1'] .rating_item:nth-child(n+5){
+  color: orange;
+}
+.phone_name {
+  grid-area:phone_name;
+  cursor: pointer;
+  text-decoration: solid;
+}
+.back_to_main {
+  grid-area: back_to_main;
+  cursor: pointer;
+}

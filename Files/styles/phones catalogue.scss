@@ -1,0 +1,59 @@
+.phone-item {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+.bestseller {
+  background-color: #87d756;
+  padding: 3px;
+  border-radius: 3px;
+  position: relative;
+  top: -15px;
+  color: #FFFFFF;
+}
+.promo_marker {
+  border: 1px solid dodgerblue;
+  border-radius: 3px;
+  width: 100%;
+}
+.normal {
+  border: 1px solid white;
+  box-shadow: 0 5px 10px #e4e8f1;
+
+
+}
+.image {
+
+  margin: 20px;
+}
+
+.item-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+}
+
+.details-link {
+  text-decoration: none;
+}
+
+.description {
+  width: 80%;
+  text-align: left;
+  margin-left: 0;
+  color: black;
+
+}
+.add, .btn_details {
+  margin-left: auto;
+  width: 130px;
+  padding: 0.5em 2em;
+  box-shadow: 0 2px 5px 0;
+  margin-bottom: 20px;
+}
+.hidden {
+  visibility: hidden;
+}
