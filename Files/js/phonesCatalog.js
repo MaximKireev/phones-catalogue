@@ -18,7 +18,7 @@ export class PhonesCatalog extends Component{
      <li class = 'phone-item' >
      ${phone.isBestseller? `<fieldset class = "promo_marker">`: `<fieldset class = "promo_marker normal">`}
      ${phone.isBestseller? `<span class = 'bestseller'>Bestseller</span>` : `<span class = 'bestseller hidden'>Bestseller</span>`}
-             <div class="item-wrapper">
+        <div class="item-wrapper">
         <a href="#" class = 'details-link'><h2 class="item-name">${phone.name}</h2></a>
         <a href="#" class = 'image' ><img src="${phone.imageUrl}" width = 150 height = 150 alt="phone image"></a>
 
@@ -63,7 +63,7 @@ export class PhonesCatalog extends Component{
             btnDetails.addEventListener('click', (e)=>{
             let delegateTarget = e.target.classList.contains('btn_details');
             if(!delegateTarget) {return}
-            
+
                 let model = this.props.phones.find(item => item.name == e.target.parentElement.firstElementChild.firstElementChild.innerText? item.id: false)
 
             this.props.isPhoneSelected(model.id);

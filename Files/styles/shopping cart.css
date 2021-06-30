@@ -1,5 +1,5 @@
 .shopping-cart-container {
-  position: absolute;
+  position: fixed;
   display: none;
   top: 100px;
   right: 100px;
