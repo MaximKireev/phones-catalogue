@@ -16,7 +16,7 @@ render(){
 <header>
 <div class="main-menu-container">
   <ul class="main-menu">
-    <li class="about"><a href="#">About</a></li>
+    <li class="about"><a href="#">Home</a></li>
     <li class="phones"><a href="#">Phones</a></li>
     <li class="tv"><a href="#">TVs</a></li>
   </ul>

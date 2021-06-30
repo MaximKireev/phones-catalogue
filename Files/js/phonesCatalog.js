@@ -34,6 +34,8 @@ export class PhonesCatalog extends Component{
      
       
     </ul>`
+        let btnsAdd = document.querySelectorAll('.add');
+        let btnMoreDetails = document.querySelectorAll('.btn_details');
 
         this.element.addEventListener('click', (e)=>{
             let delegateTarget = e.target.classList.contains('item-name');
@@ -44,7 +46,6 @@ export class PhonesCatalog extends Component{
             
             this.props.isPhoneSelected(model.id);
         });
-        let btnsAdd = document.querySelectorAll('.add');
         for (const btnAdd of btnsAdd) {
         btnAdd.addEventListener('click', (e)=>{
             const searchValue = e.target.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.innerText;
@@ -56,6 +57,16 @@ export class PhonesCatalog extends Component{
                 phoneName: user.name,
                 price: 200,
                 uniqueId: e.target.dataset.number});
+        })
+        }
+        for(let btnDetails of btnMoreDetails) {
+            btnDetails.addEventListener('click', (e)=>{
+            let delegateTarget = e.target.classList.contains('btn_details');
+            if(!delegateTarget) {return}
+            
+                let model = this.props.phones.find(item => item.name == e.target.parentElement.firstElementChild.firstElementChild.innerText? item.id: false)
+
+            this.props.isPhoneSelected(model.id);
         })
         }
     }

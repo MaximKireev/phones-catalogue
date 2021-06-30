@@ -8,7 +8,6 @@ export class PhoneDetails extends Component{
     render(){
        let phone = this.props.phone;
        let currentPhone = this.props.currentPhone;
-       console.log(currentPhone)
         if(!this.element) {return}
         this.element.innerHTML = `
 <div class="gallery-container">
