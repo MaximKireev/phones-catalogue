@@ -34,7 +34,7 @@ export class PhonesCatalog extends Component{
      
       
     </ul>`
-
+            //Передача в пропсы ID устройства для перехода из карточки товара на страницу с деталями товара.
         this.element.addEventListener('click', (e)=>{
             let delegateTarget = e.target.classList.contains('item-name');
             if(!delegateTarget) {return}
@@ -44,10 +44,12 @@ export class PhonesCatalog extends Component{
             
             this.props.isPhoneSelected(model.id);
         });
+
+        //добавить телефон в корзину
         let btnsAdd = document.querySelectorAll('.add');
         for (const btnAdd of btnsAdd) {
         btnAdd.addEventListener('click', (e)=>{
-            const searchValue = e.target.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.innerText;
+            const searchValue = e.target.closest('.item-wrapper').querySelector('.item-name').innerText;
 
             let user = this.props.phones.find(item => (item.name === searchValue))
 
