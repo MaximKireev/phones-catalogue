@@ -25,7 +25,6 @@
 
 }
 .image {
-
   margin: 20px;
 }
 
@@ -38,6 +37,7 @@
 
 .details-link {
   text-decoration: none;
+  width: 50%;
 }
 
 .description {
@@ -53,7 +53,19 @@
   padding: 0.5em 2em;
   box-shadow: 0 2px 5px 0;
   margin-bottom: 20px;
+  border: none;
+}
+.btn_details{
+  background-color: #FF6D00;
 }
 .hidden {
   visibility: hidden;
+}
+.item-price {
+  margin:-50px 30px 0 auto ;
+  font: bold 42px Lato, sans-serif;
+  color: red;
+}
+.currency{
+  font: bold 22px Lato, sans-serif;
 }

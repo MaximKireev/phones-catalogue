@@ -14,12 +14,12 @@ export class PhonesCatalog extends Component{
         this.element.innerHTML = `<ul class="phones-list">
 
      ${this.props.phones.map((phone, elem) => `
-       
      <li class = 'phone-item' >
      ${phone.isBestseller? `<fieldset class = "promo_marker">`: `<fieldset class = "promo_marker normal">`}
      ${phone.isBestseller? `<span class = 'bestseller'>Bestseller</span>` : `<span class = 'bestseller hidden'>Bestseller</span>`}
         <div class="item-wrapper">
         <a href="#" class = 'details-link'><h2 class="item-name">${phone.name}</h2></a>
+        <h2 class="item-price">${phone.price} <span class = 'currency'>USD</span> </h2>
         <a href="#" class = 'image' ><img src="${phone.imageUrl}" width = 150 height = 150 alt="phone image"></a>
 
         <p class="description">${phone.snippet}</p>

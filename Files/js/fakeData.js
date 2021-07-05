@@ -4,7 +4,7 @@ export const getAllPhones = () => {
     return [
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"799",
             "isBestseller": true,
             "age": 0,
             "id": "motorola-xoom-with-wi-fi",
@@ -14,7 +14,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"699",
             "age": 1,
             "id": "motorola-xoom",
             "imageUrl": "img/phones/motorola-xoom.0.jpg",
@@ -23,7 +23,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"899",
             "isBestseller": true,
             "age": 2,
             "carrier": "AT&T",
@@ -34,7 +34,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Dell",
-            "Price":"799",
+            "price":"1100",
             "isBestseller": false,
             "age": 3,
             "id": "dell-streak-7",
@@ -44,7 +44,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Samsung",
-            "Price":"799",
+            "price":"550",
             "isBestseller": false,
             "age": 4,
             "carrier": "Cellular South",
@@ -55,7 +55,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Dell",
-            "Price":"799",
+            "price":"699",
             "isBestseller": true,
             "age": 5,
             "carrier": "Dell",
@@ -66,7 +66,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Nexus",
-            "Price":"799",
+            "price":"799",
             "isBestseller": false,
             "age": 6,
             "carrier": "Best Buy",
@@ -77,7 +77,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "LG",
-            "Price":"799",
+            "price":"750",
             "isBestseller": false,
             "age": 7,
             "carrier": "Cellular South",
@@ -88,7 +88,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Samsung",
-            "Price":"799",
+            "price":"400",
             "isBestseller": false,
             "age": 8,
             "id": "samsung-galaxy-tab",
@@ -98,7 +98,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Samsung",
-            "Price":"799",
+            "price":"1000",
             "isBestseller": false,
             "age": 9,
             "carrier": "Cellular South",
@@ -109,7 +109,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"999",
             "isBestseller": false,
             "age": 10,
             "carrier": "Verizon",
@@ -120,7 +120,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"920",
             "isBestseller": false,
             "age": 11,
             "carrier": "Verizon",
@@ -131,7 +131,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"799",
             "isBestseller": false,
             "age": 12,
             "carrier": "AT&T",
@@ -142,7 +142,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"850",
             "isBestseller": false,
             "age": 13,
             "carrier": "T-Mobile",
@@ -153,7 +153,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "T-Mobile",
-            "Price":"799",
+            "price":"499",
             "isBestseller": false,
             "age": 14,
             "carrier": "T-Mobile",
@@ -164,7 +164,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Samsung",
-            "Price":"799",
+            "price":"799",
             "isBestseller": false,
             "age": 15,
             "carrier": "US Cellular",
@@ -175,7 +175,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "SANYO",
-            "Price":"799",
+            "price":"799",
             "isBestseller": false,
             "age": 16,
             "carrier": "Sprint",
@@ -186,7 +186,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Samsung",
-            "Price":"799",
+            "price":"650",
             "isBestseller": false,
             "age": 17,
             "id": "samsung-transform",
@@ -196,7 +196,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "T-Mobile",
-            "Price":"799",
+            "price":"799",
             "isBestseller": false,
             "age": 18,
             "id": "t-mobile-g2",
@@ -206,7 +206,7 @@ export const getAllPhones = () => {
         },
         {
             "brand": "Motorola",
-            "Price":"799",
+            "price":"799",
             "isBestseller": false,
             "age": 19,
             "id": "motorola-charm-with-motoblur",
