@@ -66,17 +66,15 @@ export class PhonesCatalog extends Component{
                 uniqueId: e.target.dataset.number});
         })
         }
-        
+        //Передача в пропсы ID устройства для перехода из карточки товара на страницу с деталями товара после нажатия на кнопку "More details".
+
         for(let btnDetails of btnMoreDetails) {
             btnDetails.addEventListener('click', (e)=>{
             let delegateTarget = e.target.classList.contains('btn_details');
             if(!delegateTarget) {return}
 
             let model = this.props.phones.find(item => item.name == e.target.closest('.item-wrapper').querySelector('.item-name').innerText? item.id: false)
-            console.log(model);
-                console.log(model.id)
-
-                this.props.isPhoneSelected(model.id);
+             this.props.isPhoneSelected(model.id);
 
             })
         }
