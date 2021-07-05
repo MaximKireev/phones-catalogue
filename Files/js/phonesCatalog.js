@@ -34,8 +34,12 @@ export class PhonesCatalog extends Component{
      
       
     </ul>`
+
         let btnsAdd = document.querySelectorAll('.add');
         let btnMoreDetails = document.querySelectorAll('.btn_details');
+
+
+            //Передача в пропсы ID устройства для перехода из карточки товара на страницу с деталями товара.
 
         this.element.addEventListener('click', (e)=>{
             let delegateTarget = e.target.classList.contains('item-name');
@@ -46,9 +50,12 @@ export class PhonesCatalog extends Component{
             
             this.props.isPhoneSelected(model.id);
         });
+
+        //добавить телефон в корзину
+
         for (const btnAdd of btnsAdd) {
         btnAdd.addEventListener('click', (e)=>{
-            const searchValue = e.target.parentElement.parentElement.lastElementChild.firstElementChild.firstElementChild.innerText;
+            const searchValue = e.target.closest('.item-wrapper').querySelector('.item-name').innerText;
 
             let user = this.props.phones.find(item => (item.name === searchValue))
 
@@ -64,10 +71,13 @@ export class PhonesCatalog extends Component{
             let delegateTarget = e.target.classList.contains('btn_details');
             if(!delegateTarget) {return}
 
-                let model = this.props.phones.find(item => item.name == e.target.parentElement.firstElementChild.firstElementChild.innerText? item.id: false)
+            let model = this.props.phones.find(item => item.name == e.target.closest('.item-wrapper').querySelector('.item-name').innerText? item.id: false)
+            console.log(model);
+                console.log(model.id)
 
-            this.props.isPhoneSelected(model.id);
-        })
+                this.props.isPhoneSelected(model.id);
+
+            })
         }
     }
 }
