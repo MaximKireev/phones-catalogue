@@ -66,6 +66,7 @@ export class PhonesCatalog extends Component{
                 uniqueId: e.target.dataset.number});
         })
         }
+        
         for(let btnDetails of btnMoreDetails) {
             btnDetails.addEventListener('click', (e)=>{
             let delegateTarget = e.target.classList.contains('btn_details');
