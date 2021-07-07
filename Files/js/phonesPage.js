@@ -82,13 +82,14 @@ export class PhonesPage extends Component{
             currentPhone: this.state.currentSelectedPhone}
         );
         new Search(document.querySelector('Search'),
-            {globalSearchValue: (str)=>{
-                this.state.getPhones = getAllPhones(str);
-                    this.render();
-                }});
-        new PhonesCatalog (document.querySelector('PhonesCatalog'),
-            {phones: this.state.getPhones,
+            {
+                globalSearchValue: (str)=>{
 
+                phonesCatalog.props.phones = getAllPhones(str);
+                phonesCatalog.render();
+                }});
+        let phonesCatalog = new PhonesCatalog (document.querySelector('PhonesCatalog'),
+            {phones: this.state.getPhones,
                 isPhoneSelected: (phoneName)=>{
                     this.state.currentSelectedPhone = phoneName;
                     this.render();

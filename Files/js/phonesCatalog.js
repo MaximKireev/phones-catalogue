@@ -11,9 +11,11 @@ export class PhonesCatalog extends Component{
 
     render(){
         if(!this.element) {return}
+        console.log(this.props.phones)
         this.element.innerHTML = `<ul class="phones-list">
+        
+${this.props.phones.map((phone, elem) => `
 
-     ${this.props.phones.map((phone, elem) => `
      <li class = 'phone-item' >
      ${phone.isBestseller? `<fieldset class = "promo_marker">`: `<fieldset class = "promo_marker normal">`}
      ${phone.isBestseller? `<span class = 'bestseller'>Bestseller</span>` : `<span class = 'bestseller hidden'>Bestseller</span>`}

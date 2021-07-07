@@ -215,16 +215,8 @@ let phonesArray =  [
 
 export const getAllPhones = (str = '') => {
 
+    return phonesArray.filter(elem => elem.brand.toLowerCase().includes(str.toLowerCase()));
 
-
-
-    if(str !== ''){
-        let  newarr = phonesArray.filter(elem => elem.brand.toLowerCase().includes(str));
-        return newarr;
-    }
-    else{
-        return phonesArray
-    }
 };
 
 export const getOnePhone = (phone) => {
