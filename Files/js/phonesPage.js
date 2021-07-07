@@ -81,7 +81,11 @@ export class PhonesPage extends Component{
                     }},
             currentPhone: this.state.currentSelectedPhone}
         );
-        new Search(document.querySelector('Search'));
+        new Search(document.querySelector('Search'),
+            {globalSearchValue: (str)=>{
+                this.state.getPhones = getAllPhones(str);
+                    this.render();
+                }});
         new PhonesCatalog (document.querySelector('PhonesCatalog'),
             {phones: this.state.getPhones,
 

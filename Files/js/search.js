@@ -40,8 +40,11 @@ export class Search extends  Component{
         </ul>
         `
         let gSearch = document.querySelector('.global_search');
-        gSearch.addEventListener('input', ()=>{
+        gSearch.addEventListener('input', (e)=>{
 
+            if(e.target.value.length > 2){
+                this.props.globalSearchValue(e.target.value)
+            }
         })
 
     }
