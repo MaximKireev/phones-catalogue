@@ -11,7 +11,6 @@ export class PhonesCatalog extends Component{
 
     render(){
         if(!this.element) {return}
-        console.log(this.props.phones)
         this.element.innerHTML = `<ul class="phones-list">
         
 ${this.props.phones.map((phone, elem) => `
@@ -80,5 +79,6 @@ ${this.props.phones.map((phone, elem) => `
 
             })
         }
+
     }
 }

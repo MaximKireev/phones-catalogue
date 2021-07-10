@@ -83,9 +83,9 @@ export class PhonesPage extends Component{
         );
         new Search(document.querySelector('Search'),
             {
-                globalSearchValue: (str)=>{
+                globalSearch: (obj)=>{
 
-                phonesCatalog.props.phones = getAllPhones(str);
+                phonesCatalog.props.phones = getAllPhones(obj);
                 phonesCatalog.render();
                 }});
         let phonesCatalog = new PhonesCatalog (document.querySelector('PhonesCatalog'),
