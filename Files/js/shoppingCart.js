@@ -96,7 +96,7 @@ ${           this.props.selectedItems.length < 1 ?
                 cart.style.display = "none";
                 cartBGC.style.display = "none";
             }
-        
+
 
 
         })
