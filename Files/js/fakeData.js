@@ -252,7 +252,7 @@ export const getAllPhones = (obj = {}) => {
     }
 
     function osSearch(elem) {
-      if (obj.os.length == 0) {
+      if (obj.os.length === 0) {
       return elem
       }
       else {

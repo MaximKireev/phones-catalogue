@@ -83,10 +83,16 @@ export class Search extends  Component{
         }
         //Выбор операционной системы в секции фильтрации
         for(let os of osInputs){
-            os.addEventListener('click', ()=>{
+            os.addEventListener('change', ()=>{
                 if(os.checked === true){
+                    if(!searchObject.os.includes(os.nextElementSibling.innerText)){
                     searchObject.os.push(os.nextElementSibling.innerText);
                     this.props.globalSearch(searchObject)
+                    }
+                }
+                else if (os.checked === false) {
+                    searchObject.os = searchObject.os.filter(item => item !== os.nextElementSibling.innerText);
+                    this.props.globalSearch(searchObject);
                 }
 
             else {return}
