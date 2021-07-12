@@ -74,8 +74,15 @@ export class Search extends  Component{
         for(let brand of brandItems){
             brand.addEventListener('click', ()=>{
                 if(brand.checked === true){
-                  searchObject.brands.push(brand.nextElementSibling.innerText);
-
+                    gSearch.value = '';
+                    if(!searchObject.brands.includes(brand.nextElementSibling.innerText)){
+                    searchObject.brands.push(brand.nextElementSibling.innerText);
+                    this.props.globalSearch(searchObject)
+                    }
+                }
+                else if (brand.checked === false) {
+                    searchObject.brands = searchObject.brands.filter(item => item !== brand.nextElementSibling.innerText);
+                    this.props.globalSearch(searchObject);
                 }
                 else {return}
 

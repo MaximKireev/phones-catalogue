@@ -250,6 +250,16 @@ export const getAllPhones = (obj = {}) => {
             return Number(el.price) >0
         }
     }
+    function brandSearch(elem) {
+        if (obj.brands.length === 0) {
+            return elem
+        }
+        else {
+            return obj.brands.indexOf(elem.brand) !== -1
+        }
+
+
+    }
 
     function osSearch(elem) {
       if (obj.os.length === 0) {
@@ -265,7 +275,8 @@ export const getAllPhones = (obj = {}) => {
     if(Object.keys(obj).length !== 0){
         return phonesArray.filter(elem => elem.brand.toLowerCase().includes(obj.globalSearchValue))
             .filter(el => priceSearch(el))
-            .filter(elem => osSearch(elem))}
+            .filter(brand => brandSearch(brand))
+            .filter(os => osSearch(os))}
 
     else{return phonesArray}
 };
