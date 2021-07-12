@@ -20,7 +20,7 @@ export class ShoppingCart extends Component{
   </ul>
   
       <div class="shopping-cart-container">
-      <div class="background"></div>
+      <div class="background"><div class="close-cart"><span>X</span></div></div>
   <div class="shopping-cart">
     <div class="shopping-cart-header">
       <img src="img/iconfinder_icon-ios7-cart_211708.svg" width="30px" height="30px"><span class="badge">${this.props.selectedItems.length}</span>
@@ -63,6 +63,8 @@ ${           this.props.selectedItems.length < 1 ?
         let plus = document.querySelector('.plus');
         let qty_items = document.querySelector('.qty_items');
         let cartBGC = document.querySelector('.background');
+        let closeCart = document.querySelector('.close-cart');
+
 
 
             if(shoppingCartItems.length>0) {
@@ -79,17 +81,25 @@ ${           this.props.selectedItems.length < 1 ?
 
 
         link.addEventListener('click', ()=>{
-            if(cart.style.display === "none"){
-                cart.style.display = "block";
-                cartBGC.style.display = "block";
+            if(cart.style.display === "block"){
+                return
                 }
                 else {
-                cart.style.display = "none";
-                cartBGC.style.display = "none";
+                cart.style.display = "block";
+                cartBGC.style.display = "block";
             }
 
 
             })
+        closeCart.addEventListener('click', ()=>{
+            if(cart.style.display === "block"){
+                cart.style.display = "none";
+                cartBGC.style.display = "none";
+            }
+        
+
+
+        })
         cart.addEventListener('click', (e)=>{
             let target = e.target.classList.contains('del');
             if(!target) {return}

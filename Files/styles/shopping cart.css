@@ -25,6 +25,29 @@
   z-index: 9999;
 }
 
+.close-cart {
+  position: relative;
+  border: 10px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.close-cart span {
+  display: block;
+  padding: 5px;
+  font: bold 30px Arial, sans-serif;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
 .shopping-cart-header {
   display: flex;
   justify-content: space-between;
