@@ -31,23 +31,23 @@ export class PhoneDetails extends Component{
   <li class="advantages-item">Bluetooth: <b class="adv-value">${phone.connectivity.bluetooth}</b></li>
   </ul>
 </section>
-  <div class="bf-container" ><img class="largeImg" src="img/phones/${currentPhone}.0.jpg" alt="Large image" width = '400px' height="400px"></div>
+  <div class="bf-container" ><img class="largeImg" src="Files/img/phones/${currentPhone}.0.jpg" alt="Large image" width = '400px' height="400px"></div>
 
   <ul class="small-img-list">
     <li>
-      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="img/phones/${currentPhone}.0.jpg" width = '100px' height="100px"></a>
+      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="Files/img/phones/${currentPhone}.0.jpg" width = '100px' height="100px"></a>
     </li>
     <li>
-      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="img/phones/${currentPhone}.1.jpg" width = '100px' height="100px"></a>
+      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="Files/img/phones/${currentPhone}.1.jpg" width = '100px' height="100px"></a>
     </li>
     <li>
-      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="img/phones/${currentPhone}.2.jpg" width = '100px' height="100px"></a>
+      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="Files/img/phones/${currentPhone}.2.jpg" width = '100px' height="100px"></a>
     </li>
     <li>
-      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="img/phones/${currentPhone}.3.jpg" width = '100px' height="100px"></a>
+      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="Files/img/phones/${currentPhone}.3.jpg" width = '100px' height="100px"></a>
     </li>
     <li>
-      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="img/phones/${currentPhone}.4.jpg" width = '100px' height="100px"></a>
+      <a href="#" class = 'image_item' title="Image_item"><img class = 'small_photo' src="Files/img/phones/${currentPhone}.4.jpg" width = '100px' height="100px"></a>
     </li>
   </ul>
   <section class="phone-right-menu">
@@ -77,7 +77,7 @@ export class PhoneDetails extends Component{
         }
         for(const photo of smallPhotos){
             photo.addEventListener('error', (e)=>{
-                e.target.src = "img/noImage.jpg"
+                e.target.src = "Files/img/noImage.jpg"
             })
         }
     }
