@@ -1,4 +1,8 @@
-let phonesArray =  [
+let phonesArray = fetch('https://github.com/MaximKireev/phones-catalogue/blob/master/Files/api/phones.json')
+    .then(response => response.json())
+    .then(result => result);
+
+/*let phonesArray =  [
     {
         "brand": "Motorola",
         "price":"799",
@@ -231,7 +235,7 @@ let phonesArray =  [
         "snippet": "Motorola CHARM fits easily in your pocket or palm.  Includes MOTOBLUR service.",
         'os': 'Android'
     }
-]
+]*/
 
 export const getAllPhones = (obj = {}) => {
 
