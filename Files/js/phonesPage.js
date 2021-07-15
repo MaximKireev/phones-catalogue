@@ -15,11 +15,16 @@ export class PhonesPage extends Component{
             getPhones: getAllPhones(),
             currentSelectedPhone: null,
             phoneForDetails: getOnePhone(123),
-
         };
-        this.render();
+
+        this.getFetchData()
 
          }
+
+    async getFetchData(){
+        this.state.getPhones = await getAllPhones();
+        this.render();
+    }
 
     render(){
         this.element.innerHTML = `
@@ -112,6 +117,8 @@ export class PhonesPage extends Component{
                     },
 
                 });
+
+
     }
 
 }

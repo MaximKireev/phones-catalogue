@@ -1,8 +1,8 @@
-let phonesArray = fetch('https://github.com/MaximKireev/phones-catalogue/blob/master/Files/api/phones.json')
-    .then(response => response.json())
-    .then(result => result);
 
-/*let phonesArray =  [
+
+
+
+let phonesArray =  [
     {
         "brand": "Motorola",
         "price":"799",
@@ -235,9 +235,11 @@ let phonesArray = fetch('https://github.com/MaximKireev/phones-catalogue/blob/ma
         "snippet": "Motorola CHARM fits easily in your pocket or palm.  Includes MOTOBLUR service.",
         'os': 'Android'
     }
-]*/
+]
 
 export const getAllPhones = (obj = {}) => {
+
+
 
 //Функция обработки параметров цены "от" т "до"
     function priceSearch(el) {
