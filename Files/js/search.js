@@ -9,7 +9,7 @@ export class Search extends  Component{
     }
     render(){
         let uniqueBrandItems = [];
-        [...getAllPhones()].forEach(el => uniqueBrandItems.push(el.brand) )
+        this.props.phones.forEach(el => uniqueBrandItems.push(el.brand) )
 
 
 

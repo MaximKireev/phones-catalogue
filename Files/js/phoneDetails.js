@@ -6,9 +6,14 @@ export class PhoneDetails extends Component{
         this.render();
     }
     render(){
-       let phone = this.props.phone;
-       let currentPhone = this.props.currentPhone;
+
+        let phone = this.props.phone
+        let currentPhone = this.props.currentPhone;
+        console.log(currentPhone)
         if(!this.element) {return}
+
+
+
         this.element.innerHTML = `
 <div class="gallery-container">
 <h1 class="phone_name">${phone.id}</h1>

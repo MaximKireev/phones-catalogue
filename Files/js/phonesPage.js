@@ -12,17 +12,21 @@ export class PhonesPage extends Component{
     constructor(element, props, state) {
         super(element, props, state)
         this.state = {
-            getPhones: getAllPhones(),
+            getPhones: [],
             currentSelectedPhone: null,
-            phoneForDetails: getOnePhone(123),
+            phoneForDetails: null,
         };
 
         this.getFetchData()
-
          }
 
     async getFetchData(){
         this.state.getPhones = await getAllPhones();
+        if(this.state.currentSelectedPhone){
+            this.state.phoneForDetails = await getOnePhone(this.state.currentSelectedPhone);
+
+        }
+
         this.render();
     }
 
@@ -72,15 +76,17 @@ export class PhonesPage extends Component{
         });
         new Footer (document.querySelector('Footer'));
 
-        new PhoneDetails (document.querySelector('PhoneDetails'),
-            {phone: this.state.phoneForDetails,
+        let phoneDetails = new PhoneDetails (document.querySelector('PhoneDetails'),
+            {
+                phone: this.state.phoneForDetails
+                ,
                 onBack: ()=>{this.state.currentSelectedPhone = null; this.render(); },
                 addToCart: (obj)=> {
-                    if(shoppingCartItems.find( item => item.uniqueId === obj.uniqueId)){
+                if(shoppingCartItems.find( item => item.uniqueId === obj.uniqueId)){
                         modal.style.visibility = 'visible';
                         modalMessage.style.visibility = 'visible';
                     }
-                    else {
+                else {
                         shoppingCartItems.push(obj);
                         this.render();
                     }},
@@ -88,18 +94,24 @@ export class PhonesPage extends Component{
         );
         new Search(document.querySelector('Search'),
             {
-                globalSearch: (obj)=>{
+                phones: this.state.getPhones,
+                globalSearch: async (obj)=>{
+                let fetchResult = await getAllPhones(obj);
 
-                phonesCatalog.props.phones = getAllPhones(obj);
+                phonesCatalog.props.phones = fetchResult
                 phonesCatalog.render();
-                }});
+                }
+            });
         let phonesCatalog = new PhonesCatalog (document.querySelector('PhonesCatalog'),
+
             {phones: this.state.getPhones,
-                isPhoneSelected: (phoneName)=>{
+
+                isPhoneSelected:  (phoneName) =>{
                     this.state.currentSelectedPhone = phoneName;
-                    this.render();
+                    this.getFetchData();
 
                 },
+
                 addToCart: (obj)=> {
 
                     if(shoppingCartItems.find( item => item.uniqueId === obj.uniqueId)){

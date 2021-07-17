@@ -76,6 +76,7 @@ ${this.props.phones.map((phone, elem) => `
 
             let model = this.props.phones.find(item => item.name == e.target.closest('.item-wrapper').querySelector('.item-name').innerText? item.id: false)
              this.props.isPhoneSelected(model.id);
+             this.props.isPhoneForDetails(model.id)
 
             })
         }
